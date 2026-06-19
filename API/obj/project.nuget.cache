@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "CVGRTqsIVWo=",
+  "dgSpecHash": "Yzp8qYyl7gk=",
   "success": true,
   "projectFilePath": "/Users/efox1515/Desktop/Visual Studio/React And .Net Full Stack/API/API.csproj",
   "expectedPackageFiles": [
+    "/Users/efox1515/.nuget/packages/automapper/14.0.0/automapper.14.0.0.nupkg.sha512",
     "/Users/efox1515/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/efox1515/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
+    "/Users/efox1515/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/efox1515/.nuget/packages/microsoft.build.framework/18.0.2/microsoft.build.framework.18.0.2.nupkg.sha512",
     "/Users/efox1515/.nuget/packages/microsoft.codeanalysis.analyzers/3.11.0/microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
     "/Users/efox1515/.nuget/packages/microsoft.codeanalysis.common/5.0.0/microsoft.codeanalysis.common.5.0.0.nupkg.sha512",
@@ -37,6 +40,18 @@
     "/Users/efox1515/.nuget/packages/system.composition.typedparts/9.0.0/system.composition.typedparts.9.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'AutoMapper' 14.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
+      "projectPath": "/Users/efox1515/Desktop/Visual Studio/React And .Net Full Stack/API/API.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/efox1515/Desktop/Visual Studio/React And .Net Full Stack/API/API.csproj",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
     {
       "code": "NU1903",
       "level": "Warning",
