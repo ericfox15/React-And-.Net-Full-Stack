@@ -1,22 +1,29 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
+import { useActivities } from '../../../lib/hooks/useActivities';
 import React from 'react'
 type Props = {
-  activity: Activity;
+  selectedActivity: Activity;
   cancelSelectActivity?: () => void;
   openForm: (id: string) => void;
 };
-export default function ActivityDetails({ activity, cancelSelectActivity, openForm }: Props) {
+export default function ActivityDetails({selectedActivity, cancelSelectActivity, openForm }: Props) {
+    const {activities} = useActivities();
+    const activity = activities?.find(x => x.id === selectedActivity.id);
+
+    if (!activity) <Typography> Loading...</Typography>
+
+
   return (
     <Card sx={{borderRadius: '3px', backgroundColor: '#f5f5f5', boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', maxWidth: 1000}}>
         <CardMedia component="img" src={`/images/categoryImages/${activity.category}.jpg`} />
         <CardContent>
-            <Typography variant="h5">{activity[0]?.title}</Typography>
+            <Typography variant="h5">{activity.title}</Typography>
             <Typography sx={{ color: 'text.secondary' , mb: 1}}>{activity.date}</Typography>
             <Typography variant="body2" color="text.secondary">
-                {activity[0]?.description}
+                {activity.description}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary">
-                {activity[0]?.date} / {activity.venue}
+                {activity.date} / {activity.venue}
             </Typography>
         </CardContent>
         <CardActions>
